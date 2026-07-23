@@ -5,21 +5,21 @@
 class Hail < Formula
   desc "Universal communication platform for AI agents (CLI)"
   homepage "https://hail.so"
-  version "0.16.0"
+  version "0.17.0"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/hail-hq/hail/releases/download/v0.16.0/hail_0.16.0_darwin_amd64.tar.gz"
-      sha256 "e20f8d199056e123b18a2809832c0d1bff5a54aa66bad3501f2019a6637abf85"
+      url "https://github.com/hail-hq/hail/releases/download/v0.17.0/hail_0.17.0_darwin_amd64.tar.gz"
+      sha256 "58e525118718559bc6d8a272806eb955f8196bf177b085a81eba805520877c94"
 
       define_method(:install) do
         bin.install "hail"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/hail-hq/hail/releases/download/v0.16.0/hail_0.16.0_darwin_arm64.tar.gz"
-      sha256 "9f323a18f3d8433ffd9b35dae40232eb607911a40779083272fce7115602c57e"
+      url "https://github.com/hail-hq/hail/releases/download/v0.17.0/hail_0.17.0_darwin_arm64.tar.gz"
+      sha256 "f2547b5153cad00103aace4f02b6599687ef1f9e4084bdac8da93760ecd0c856"
 
       define_method(:install) do
         bin.install "hail"
@@ -29,15 +29,15 @@ class Hail < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hail-hq/hail/releases/download/v0.16.0/hail_0.16.0_linux_amd64.tar.gz"
-      sha256 "dabf23390b46548cfb7b2419962f2b0732c302211dbb2bac42acef79fb0ae31f"
+      url "https://github.com/hail-hq/hail/releases/download/v0.17.0/hail_0.17.0_linux_amd64.tar.gz"
+      sha256 "04b16e15167ae6e97251674e0571fb847d54db8740b9d8884b2aec684c46bc27"
       define_method(:install) do
         bin.install "hail"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/hail-hq/hail/releases/download/v0.16.0/hail_0.16.0_linux_arm64.tar.gz"
-      sha256 "7a5dedf14d50fba5855324714eb87bdef15d56775ddd18a8d65cfbd8d07c2ca3"
+      url "https://github.com/hail-hq/hail/releases/download/v0.17.0/hail_0.17.0_linux_arm64.tar.gz"
+      sha256 "ff30f51e35428a7cda19b6ff8bd9f650742e6f2f22a31192ed29a7b9f23405be"
       define_method(:install) do
         bin.install "hail"
       end
